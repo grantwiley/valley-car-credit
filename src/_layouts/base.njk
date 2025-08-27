@@ -5,22 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }} - Valley Car Credit</title>
     <meta name="description" content="{{ description }}">
-    
+
     <!-- Open Graph Tags -->
     <meta property="og:title" content="{{ title }} - Valley Car Credit">
     <meta property="og:description" content="{{ description }}">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://valleycarcredit.com{{ page.url }}">
-    
+
     <!-- Canonical URL -->
     <link rel="canonical" href="https://valleycarcredit.com{{ page.url }}">
-    
+
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    
+    <link rel="icon" type="image/x-icon" href="{{ '/favicon.ico' | url }}">
+
     <!-- CSS -->
-    <link rel="stylesheet" href="/css/styles.css">
-    
+    <link rel="stylesheet" href="{{ '/css/styles.css' | url }}">
+
     <!-- Structured Data -->
     <script type="application/ld+json">
     {
@@ -53,33 +53,33 @@
 <body>
     <!-- Skip Navigation for Accessibility -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
-    
+
     <!-- Header -->
     <header class="header">
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <a href="/" aria-label="Valley Car Credit Home">
-                        <img src="/images/vcc-logo.jpg" alt="Valley Car Credit Logo" class="logo-img">
+                    <a href="{{ '/' | url }}" aria-label="Valley Car Credit Home">
+                        <img src="{{ '/images/vcc-logo.jpg' | url }}" alt="Valley Car Credit Logo" class="logo-img">
                         <span class="logo-text">Valley Car Credit</span>
                     </a>
                 </div>
-                
+
                 <nav class="nav" role="navigation">
                     <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
                         <span></span>
                         <span></span>
                         <span></span>
                     </button>
-                    
+
                     <ul class="nav-menu">
-                        <li><a href="/" class="nav-link {% if page.url == '/' %}active{% endif %}">Home</a></li>
-                        <li><a href="/online-account/" class="nav-link {% if page.url == '/online-account/' %}active{% endif %}">Your Account</a></li>
-                        <li><a href="/make-payment/" class="nav-link {% if page.url == '/make-payment/' %}active{% endif %}">Make Payment</a></li>
-                        <li><a href="/credit-improvement/" class="nav-link {% if page.url == '/credit-improvement/' %}active{% endif %}">Improve Credit</a></li>
-                        <li><a href="/resources/" class="nav-link {% if page.url == '/resources/' %}active{% endif %}">Resources</a></li>
-                        <li><a href="/blog/" class="nav-link {% if page.url == '/blog/' %}active{% endif %}">Blog</a></li>
-                        <li><a href="/contact/" class="nav-link {% if page.url == '/contact/' %}active{% endif %}">Contact</a></li>
+                        <li><a href="{{ '/' | url }}" class="nav-link {% if page.url == '/' %}active{% endif %}">Home</a></li>
+                        <li><a href="{{ '/online-account/' | url }}" class="nav-link {% if page.url == '/online-account/' %}active{% endif %}">Your Account</a></li>
+                        <li><a href="{{ '/make-payment/' | url }}" class="nav-link {% if page.url == '/make-payment/' %}active{% endif %}">Make Payment</a></li>
+                        <li><a href="{{ '/credit-improvement/' | url }}" class="nav-link {% if page.url == '/credit-improvement/' %}active{% endif %}">Improve Credit</a></li>
+                        <li><a href="{{ '/resources/' | url }}" class="nav-link {% if page.url == '/resources/' %}active{% endif %}">Resources</a></li>
+                        <li><a href="{{ '/blog/' | url }}" class="nav-link {% if page.url == '/blog/' %}active{% endif %}">Blog</a></li>
+                        <li><a href="{{ '/contact/' | url }}" class="nav-link {% if page.url == '/contact/' %}active{% endif %}">Contact</a></li>
                     </ul>
                 </nav>
             </div>
@@ -103,26 +103,26 @@
                         Email: <a href="mailto:info@valleycarcredit.com">info@valleycarcredit.com</a>
                     </address>
                 </div>
-                
+
                 <div class="footer-section">
                     <h3>Quick Links</h3>
                     <ul class="footer-links">
-                        <li><a href="/online-account/">Your Account</a></li>
-                        <li><a href="/make-payment/">Make Payment</a></li>
-                        <li><a href="/credit-improvement/">Improve Credit</a></li>
-                        <li><a href="/resources/">Resources</a></li>
-                        <li><a href="/blog/">Blog</a></li>
-                        <li><a href="/contact/">Contact</a></li>
+                        <li><a href="{{ '/online-account/' | url }}">Your Account</a></li>
+                        <li><a href="{{ '/make-payment/' | url }}">Make Payment</a></li>
+                        <li><a href="{{ '/credit-improvement/' | url }}">Improve Credit</a></li>
+                        <li><a href="{{ '/resources/' | url }}">Resources</a></li>
+                        <li><a href="{{ '/blog/' | url }}">Blog</a></li>
+                        <li><a href="{{ '/contact/' | url }}">Contact</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-section">
                     <h3>Important Information</h3>
                     <p>Credit advice provided is for educational purposes only. Individual results may vary. Always consult with financial professionals for personalized advice.</p>
-                    <p><a href="/privacy/">Privacy Policy</a> | <a href="/terms/">Terms of Service</a></p>
+                    <p><a href="{{ '/privacy/' | url }}">Privacy Policy</a> | <a href="{{ '/terms/' | url }}">Terms of Service</a></p>
                 </div>
             </div>
-            
+
             <div class="footer-bottom">
                 <p>&copy; 2024 Valley Car Credit. All rights reserved.</p>
             </div>
@@ -138,6 +138,6 @@
     </div>
 
     <!-- JavaScript -->
-    <script src="/js/main.js"></script>
+    <script src="{{ '/js/main.js' | url }}"></script>
 </body>
 </html>
