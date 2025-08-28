@@ -262,7 +262,7 @@ a:hover {
 .hero {
     position: relative;
     z-index: 1;
-    background-image: url("https://www.toyotadirect.com/blogs/3084/wp-content/uploads/2022/12/bad_credit_car_loan.jpeg");
+    background-image: url("../images/bad_credit_car_loan.jpeg");
     background-size: cover;
     background-position: center;
     color: var(--text-white);
