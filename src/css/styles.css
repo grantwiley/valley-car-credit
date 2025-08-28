@@ -315,7 +315,9 @@ a:hover {
     display: flex;
     align-items: center;
     list-style: none;
-    gap: var(--space-2xl);
+    gap: var(--space-lg);
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .nav-link {
@@ -326,6 +328,8 @@ a:hover {
     border-radius: var(--radius-md);
     transition: var(--transition-fast);
     position: relative;
+    white-space: nowrap;
+    font-size: var(--text-sm);
 }
 
 .nav-link:hover,
@@ -910,6 +914,18 @@ section:nth-child(even) {
     }
 }
 
+/* Medium screens - adjust navigation for tablets and small desktops */
+@media (max-width: 1024px) {
+    .nav-menu {
+        gap: var(--space-sm);
+    }
+
+    .nav-link {
+        padding: var(--space-xs) var(--space-sm);
+        font-size: var(--text-xs);
+    }
+}
+
 @media (max-width: 768px) {
     .container {
         padding: 0 var(--space-lg);
@@ -927,6 +943,13 @@ section:nth-child(even) {
         box-shadow: var(--shadow-lg);
         border-top: 1px solid var(--medium-grey);
         gap: var(--space-lg);
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+    }
+
+    .nav-link {
+        font-size: var(--text-base);
+        padding: var(--space-md);
     }
 
     .nav-menu.active {
