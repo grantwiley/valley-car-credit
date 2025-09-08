@@ -444,6 +444,7 @@ section:nth-child(even) {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: var(--space-3xl);
     margin-top: var(--space-4xl);
+    align-items: stretch;
 }
 
 .service-card {
@@ -454,6 +455,9 @@ section:nth-child(even) {
     box-shadow: var(--shadow-md);
     transition: var(--transition-base);
     border: 1px solid var(--medium-grey);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .service-card:hover {
@@ -489,6 +493,20 @@ section:nth-child(even) {
 
 .service-card:nth-child(3) .service-icon::before {
     content: "👤";
+}
+
+.service-card h3 {
+    margin-bottom: var(--space-lg);
+    min-height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-card p {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
 }
 
 .service-link {
@@ -1060,6 +1078,11 @@ section:nth-child(even) {
     }
 
     h3 {
+        font-size: var(--text-lg);
+    }
+
+    .service-card h3 {
+        min-height: 2rem;
         font-size: var(--text-lg);
     }
 }
