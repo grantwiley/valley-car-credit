@@ -71,7 +71,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const contactForm = document.querySelector("#contact-form");
   if (contactForm) {
     contactForm.addEventListener("submit", function (e) {
-      e.preventDefault();
 
       // Basic form validation
       const name = document.getElementById("name");
@@ -104,12 +103,9 @@ document.addEventListener("DOMContentLoaded", function () {
         isValid = false;
       }
 
-      if (isValid) {
-        // Show success message
-        showSuccess(
-          "Thank you for your message! We will get back to you soon.",
-        );
-        contactForm.reset();
+      // Prevent submission if invalid; otherwise allow natural submit
+      if (!isValid) {
+        e.preventDefault();
       }
     });
   }
@@ -205,24 +201,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  function showSuccess(message) {
-    const successDiv = document.createElement("div");
-    successDiv.className = "success-message";
-    successDiv.textContent = message;
-    successDiv.style.color = "var(--success-color)";
-    successDiv.style.backgroundColor = "var(--bg-light)";
-    successDiv.style.padding = "1rem";
-    successDiv.style.borderRadius = "0.5rem";
-    successDiv.style.marginTop = "1rem";
-    successDiv.style.textAlign = "center";
-
-    const form = document.querySelector("#contact-form");
-    form.parentNode.insertBefore(successDiv, form.nextSibling);
-
-    setTimeout(() => {
-      successDiv.remove();
-    }, 5000);
-  }
+  // Success helper removed (no longer used)
 
   // Add focus styles for better accessibility
   const focusableElements = document.querySelectorAll(
@@ -277,36 +256,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Newsletter form submission
-  const newsletterForm = document.querySelector(".newsletter-form");
-  if (newsletterForm) {
-    newsletterForm.addEventListener("submit", function (e) {
-      e.preventDefault();
-
-      const emailInput = this.querySelector('input[type="email"]');
-      const submitButton = this.querySelector('button[type="submit"]');
-
-      if (emailInput.value && isValidEmail(emailInput.value)) {
-        // Simulate successful subscription
-        submitButton.textContent = "Subscribed!";
-        submitButton.disabled = true;
-        submitButton.style.backgroundColor = "var(--success)";
-
-        setTimeout(() => {
-          submitButton.textContent = "Subscribe";
-          submitButton.disabled = false;
-          submitButton.style.backgroundColor = "";
-          emailInput.value = "";
-        }, 3000);
-
-        showSuccess(
-          "Thank you for subscribing! You'll receive our latest updates.",
-        );
-      } else {
-        showError(emailInput, "Please enter a valid email address");
-      }
-    });
-  }
+  // Newsletter form removed
 
   // Add CSS animation keyframes for blog filtering
   if (!document.querySelector("#blog-animations")) {
